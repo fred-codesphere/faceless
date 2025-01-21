@@ -1,0 +1,6 @@
+[submodule "faceless-server"]
+	path = faceless-server
+	url = https://github.com/fred-codesphere/faceless-server.git
+[submodule "faceless-jobs"]
+	path = faceless-jobs
+	url = https://github.com/fred-codesphere/faceless-jobs.git

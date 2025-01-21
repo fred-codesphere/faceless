@@ -1,16 +1,10 @@
-# Define the paths to the submodules
-SERVER_PATH := faceless-server/Makefile
-JOBS_PATH := faceless-jobs/Makefile
+MAKEFLAGS += -j2
+.PHONY: server jobs
 
-.PHONY: all server jobs
+run: server jobs
 
-# Default target
-all: server jobs
-
-# Target for server
 server:
-	$(MAKE) -C $(SERVER_PATH) $(MAKECMDGOALS)
+	@cd server && go run .
 
-# Target for jobs
 jobs:
-	$(MAKE) -C $(JOBS_PATH) $(MAKECMDGOALS)
+	@cd jobs && go run .
